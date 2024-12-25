@@ -67,8 +67,8 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
 }
 
-tasks.named('test') {
-    useJUnitPlatform()
+test {
+    useJunitPlatform()
 }
 
 def querydslDir = "src/main/generated"
