@@ -81,16 +81,15 @@ tasks.named('test') {
 }
 
 // Querydsl 설정부
-def querydslDir = "src/main/generated"
-
+def generated = "src/main/generated"  // QueryDSL 생성 경로
+querydsl {
+    jpa = true
+    querydslSourcesDir = generated
+}
 sourceSets {
-    main.java.srcDirs += [ querydslDir ]
+    main.java.srcDir generated
 }
 
 tasks.withType(JavaCompile) {
-    options.annotationProcessorGeneratedSourcesDirectory = file(querydslDir)
-}
-
-clean.doLast {
-    file(querydslDir).deleteDir()
+    options.annotationProcessorGeneratedSourcesDirectory = file(generated)
 }
