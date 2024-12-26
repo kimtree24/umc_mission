@@ -20,7 +20,7 @@ public class Kimtree24Application {
 				.ignoreIfMissing()
 				.load();
 
-		System.setProperty("DB_PASSWORD", dotenv.get("DB_PASSWORD"));
+		//System.setProperty("DB_PASSWORD", dotenv.get("DB_PASSWORD"));
 		SpringApplication.run(Kimtree24Application.class, args);
 	}
 	@Bean
