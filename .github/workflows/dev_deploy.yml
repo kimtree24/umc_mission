@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: CI/CD Pipeline # 이거왜 반영 안됨?
 
 on:
   push:
